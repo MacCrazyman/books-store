@@ -1,7 +1,9 @@
+import Book from './bookItem';
+
 const Books = () => (
   <div className="appContainer">
     <ul className="booksList">
-      empty
+      <Book />
     </ul>
     <div className="appFooter">
       <form>
