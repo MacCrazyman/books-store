@@ -34,7 +34,6 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,
-  // removeHandler: PropTypes.func,
 };
 
 export default Book;
