@@ -6,11 +6,11 @@ const dispatch = useDispatch();
 
 const submitBook = () => {
   const newBook = {
-    id:1,
-    title:'new book',
+    id: 1,
+    title: 'new book',
     author: 'Leonardo Pareja',
-  }
-  dispatch(addBook(newBook))
+  };
+  dispatch(addBook(newBook));
 };
 
 const Books = () => (

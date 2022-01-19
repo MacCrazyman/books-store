@@ -10,7 +10,6 @@ export default function reducer(state = initialState, action) {
 
     case REMOVE_BOOK:
 
-
     default: return state;
   }
 }
@@ -20,11 +19,11 @@ export default function reducer(state = initialState, action) {
 export const addBook = (payload) => (
   {
     type: ADD_BOOK,
-    payload
+    payload,
   }
-)
+);
 
 export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
-  payload
-})
+  payload,
+});
