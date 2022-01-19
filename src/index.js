@@ -5,8 +5,8 @@ import {
   BrowserRouter, Route, Routes,
 } from 'react-router-dom';
 import App from './App';
-import Books from './redux/books/books';
-import Categories from './redux/categories/categories';
+import Books from './components/books';
+import Categories from './components/categories';
 
 ReactDOM.render(
   <React.StrictMode>

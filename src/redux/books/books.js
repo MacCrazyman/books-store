@@ -1,26 +1,37 @@
-import Book from './bookItem';
 
-const Books = () => (
-  <div className="appContainer">
-    <ul className="booksList">
-      <Book />
-    </ul>
-    <div className="appFooter">
-      <form>
-        <label htmlFor="bookTitle">
-          ADD NEW BOOK
-          <input placeholder="Book title" type="text" required name="bookTitle" id="bookTitle" />
-        </label>
-        <input list="categories" placeholder="Category" required />
-        <datalist id="categories">
-          <option value="cat1">cat1</option>
-          <option value="cat2">cat2</option>
-          <option value="cat3">cat3</option>
-        </datalist>
-        <button type="submit">ADD BOOK</button>
-      </form>
-    </div>
-  </div>
-);
 
-export default Books;
+// Actions
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+
+// Reducer
+export default function reducer(state = {}, action = {}) {
+  switch (action.type) {
+    // do reducer stuff
+    default: return state;
+  }
+}
+
+// Action Creators
+export function loadWidgets() {
+  return { type: LOAD };
+}
+
+export function createWidget(widget) {
+  return { type: CREATE, widget };
+}
+
+export function updateWidget(widget) {
+  return { type: UPDATE, widget };
+}
+
+export function removeWidget(widget) {
+  return { type: REMOVE, widget };
+}
+
+// side effects, only as applicable
+// e.g. thunks, epics, etc
+export function getWidget () {
+  return dispatch => get('/widget').then(widget => dispatch(updateWidget(widget)))
+}
+
