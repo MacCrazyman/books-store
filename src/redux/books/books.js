@@ -8,8 +8,9 @@ export default function booksReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
-      // case REMOVE_BOOK:
-
+    case REMOVE_BOOK:
+      console.log(action.payload);
+      return [...state].filter((book) => book.id !== action.payload);
     //   break;
     default: return state;
   }

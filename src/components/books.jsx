@@ -1,9 +1,10 @@
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 import Book from './bookItem';
 
 const Books = () => {
+  const library = useSelector((store) => store.library);
   const dispatch = useDispatch();
   const submitBook = (e) => {
     e.preventDefault();
@@ -17,11 +18,15 @@ const Books = () => {
     e.target.categories.value = '';
   };
 
+  // const deleteBook = (id) => {
+  //   useDispatch(removeBook(id));
+  // };
+
   return (
 
     <div className="appContainer">
       <ul className="booksList">
-        <Book />
+        {library.map((book) => (<Book book={book} key={book.id} />))}
       </ul>
       <div className="appFooter">
         <form onSubmit={submitBook}>
