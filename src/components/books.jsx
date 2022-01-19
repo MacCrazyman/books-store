@@ -18,10 +18,6 @@ const Books = () => {
     e.target.categories.value = '';
   };
 
-  // const deleteBook = (id) => {
-  //   useDispatch(removeBook(id));
-  // };
-
   return (
 
     <div className="appContainer">
