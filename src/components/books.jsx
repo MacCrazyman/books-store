@@ -1,4 +1,17 @@
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
 import Book from './bookItem';
+
+const dispatch = useDispatch();
+
+const submitBook = () => {
+  const newBook = {
+    id:1,
+    title:'new book',
+    author: 'Leonardo Pareja',
+  }
+  dispatch(addBook(newBook))
+};
 
 const Books = () => (
   <div className="appContainer">
@@ -6,7 +19,7 @@ const Books = () => (
       <Book />
     </ul>
     <div className="appFooter">
-      <form>
+      <form onSubmit={submitBook}>
         <label htmlFor="bookTitle">
           ADD NEW BOOK
           <input placeholder="Book title" type="text" required name="bookTitle" id="bookTitle" />
