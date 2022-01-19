@@ -2,11 +2,7 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-const initialState = [{
-  id: 0,
-  title: 'book 1',
-  author: 'Lio',
-}];
+const initialState = [];
 // Reducer
 export default function booksReducer(state = initialState, action) {
   switch (action.type) {
