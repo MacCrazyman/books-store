@@ -19,6 +19,11 @@
   justify-content: flex-start;
 }
 
+footer > a {
+  text-decoration: none;
+  color: lightgrey;
+}
+
 .App-nav > a {
   text-decoration: none;
   font-family: var(--Montserrat);
@@ -46,9 +51,4 @@ h1 {
 
 main {
   padding: 2rem 6.25rem;
-}
-
-footer > a {
-  text-decoration: none;
-  color: lightgrey;
 }
