@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
 import { addBook, retreiveBooks } from '../redux/books/books';
 import Book from './bookItem';
+import './books.css';
 
 const appKey = 'uhDrozhDK5K3sfDSAsYf';
 const APIurl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
