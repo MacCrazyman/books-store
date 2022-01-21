@@ -2,21 +2,27 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
+const appKey = 'uhDrozhDK5K3sfDSAsYf';
+const APIurl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
+const booksEndpoint = `${APIurl}/${appKey}/books/`;
+
 const Book = ({ book }) => {
   const dispatch = useDispatch();
 
   const deleteBook = (id) => {
-    dispatch(removeBook(id));
+    fetch(`${booksEndpoint}${id}`, { method: 'DELETE' }).then(() => {
+      dispatch(removeBook(id));
+    });
   };
   return (
     <li>
-      <div>category</div>
+      <div>{book.category}</div>
       <div>
         {book.title}
       </div>
-      <div>{book.author}</div>
+      <div>Author</div>
       <div>comments</div>
-      <button type="button" onClick={() => { deleteBook(book.id); }}>Remove</button>
+      <button type="button" onClick={() => { deleteBook(book.item_id); }}>Remove</button>
       <div>Edit</div>
       <div>Percentage</div>
       <div>completed</div>
@@ -30,9 +36,9 @@ const Book = ({ book }) => {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
