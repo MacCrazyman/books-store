@@ -3,6 +3,10 @@ import { v4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 import Book from './bookItem';
 
+const appKey = 'uhDrozhDK5K3sfDSAsYf';
+const APIurl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
+const booksEndpoint = `${APIurl}/${appKey}/books/`;
+
 const Books = () => {
   const library = useSelector((store) => store.library);
   const dispatch = useDispatch();
@@ -13,9 +17,19 @@ const Books = () => {
       title: e.target.bookTitle.value,
       author: 'Leonardo Pareja',
     };
-    dispatch(addBook(newBook));
-    e.target.bookTitle.value = '';
-    e.target.categories.value = '';
+    fetch(booksEndpoint, {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: newBook.id,
+        title: e.target.bookTitle.value,
+        category: 'Fiction',
+      }),
+      headers: { 'Content-type': 'application/json; charset=UTF-8' },
+    }).then(() => {
+      dispatch(addBook(newBook));
+      e.target.bookTitle.value = '';
+      e.target.categories.value = '';
+    });
   };
 
   return (
