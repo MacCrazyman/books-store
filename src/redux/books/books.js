@@ -1,3 +1,6 @@
+const appKey = 'uhDrozhDK5K3sfDSAsYf';
+const APIurl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
+
 // Actions
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
