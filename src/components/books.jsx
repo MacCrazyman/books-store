@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { addBook, retreiveBooks } from '../redux/books/books';
 import Book from './bookItem';
 
 const appKey = 'uhDrozhDK5K3sfDSAsYf';
@@ -10,6 +11,16 @@ const booksEndpoint = `${APIurl}/${appKey}/books/`;
 const Books = () => {
   const library = useSelector((store) => store.library);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    fetch(booksEndpoint, {
+      method: 'GET',
+      headers: { 'Content-type': 'application/json; charset=UTF-8' },
+    }).then((response) => response.json()).then((response) => {
+      dispatch(retreiveBooks(response));
+    });
+  }, []);
+
   const submitBook = (e) => {
     e.preventDefault();
     const newBook = {
