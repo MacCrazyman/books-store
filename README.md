@@ -4,7 +4,7 @@
 
 > This project implement Redux to store info about books into an external API
 
-![screenshot](src/img/screenshot.png)
+![screenshot](src/img/screenshot.PNG)
 
 Project created using `create-react-app` and implementing `react-redux` to store and retreive information from book API.
 
