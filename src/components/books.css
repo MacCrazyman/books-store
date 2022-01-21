@@ -11,7 +11,7 @@
   border-top: 1px solid lightgrey;
 }
 
-.appFooter>form {
+.appFooter > form {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -22,13 +22,13 @@
 .formTitle {
   text-align: left;
   flex: 2 1;
-  color: #888888;
+  color: #888;
   font-size: 1.25rem;
   font-weight: bold;
 }
 
 #formLabel {
-  margin: 1.8rem 0 1rem 0
+  margin: 1.8rem 0 1rem 0;
 }
 
 #bookTitle {
@@ -44,7 +44,7 @@ form input {
 }
 
 #category {
-  flex: 0 1 18rem
+  flex: 0 1 18rem;
 }
 
 #submitBook {

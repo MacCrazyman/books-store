@@ -62,7 +62,7 @@
 .progressIndicator {
   display: grid;
   column-gap: 10px;
-  grid-template: "a b" 1fr "a c" 1fr ;
+  grid-template: "a b" 1fr "a c" 1fr;
   font-family: var(--Montserrat);
   text-align: left;
 }
@@ -73,7 +73,7 @@
   margin: auto auto;
 }
 
-.percentageLogo>img {
+.percentageLogo > img {
   width: 100%;
 }
 

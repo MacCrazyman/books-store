@@ -19,7 +19,7 @@
   justify-content: flex-start;
 }
 
-.App-nav>a {
+.App-nav > a {
   text-decoration: none;
   font-family: var(--Montserrat);
 }
@@ -48,7 +48,7 @@ main {
   padding: 2rem 6.25rem;
 }
 
-footer a {
+footer > a {
   text-decoration: none;
   color: lightgrey;
 }

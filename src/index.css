@@ -1,9 +1,9 @@
 :root {
-  --Montserrat : 'Montserrat', sans-serif;
-  --Roboto : 'Roboto Slab', serif;
-  --Primary-blue : #0290ff;
-  --Secondary-blue : #4386bf;
-  --Title-gray : #888888;
+  --Montserrat: 'Montserrat', sans-serif;
+  --Roboto: 'Roboto Slab', serif;
+  --Primary-blue: #0290ff;
+  --Secondary-blue: #4386bf;
+  --Title-gray: #888;
 }
 
 * {
