@@ -37,10 +37,11 @@ const Book = ({ book }) => {
         <div className="percentageNumber">64%</div>
         <div className="percentageLabel">completed</div>
       </div>
+      <div className="separator" />
       <div className="chapterSection">
-        <div>Current chapter</div>
-        <div>chapter number</div>
-        <button type="button">Update progress</button>
+        <div className="chapterLabel">Current chapter</div>
+        <div className="currentChapter">chapter number</div>
+        <button className="updateProgressButton" type="button">Update progress</button>
       </div>
     </li>
 
