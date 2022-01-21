@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
+import './bookItem.css';
+import progressIcon from '../img/progressIcon.PNG';
 
 const appKey = 'uhDrozhDK5K3sfDSAsYf';
 const APIurl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
@@ -15,20 +17,31 @@ const Book = ({ book }) => {
     });
   };
   return (
-    <li>
-      <div>{book.category}</div>
-      <div>
-        {book.title}
+    <li className="bookItem">
+      <div className="infoSection">
+        <div className="category">{book.category}</div>
+        <div className="title">
+          {book.title}
+        </div>
+        <div className="author">Author</div>
+        <div className="buttons">
+          <div className="commentButton smoothLink">comments</div>
+          |
+          <button className="removeButton smoothLink" type="button" onClick={() => { deleteBook(book.item_id); }}>Remove</button>
+          |
+          <div className="EditButton smoothLink">Edit</div>
+        </div>
       </div>
-      <div>Author</div>
-      <div>comments</div>
-      <button type="button" onClick={() => { deleteBook(book.item_id); }}>Remove</button>
-      <div>Edit</div>
-      <div>Percentage</div>
-      <div>completed</div>
-      <div>Current chapter</div>
-      <div>chapter number</div>
-      <button type="button">Update progress</button>
+      <div className="progressIndicator">
+        <div className="percentageLogo"><img src={progressIcon} alt="Progress indicator" /></div>
+        <div className="percentageNumber">64%</div>
+        <div className="percentageLabel">completed</div>
+      </div>
+      <div className="chapterSection">
+        <div>Current chapter</div>
+        <div>chapter number</div>
+        <button type="button">Update progress</button>
+      </div>
     </li>
 
   );
