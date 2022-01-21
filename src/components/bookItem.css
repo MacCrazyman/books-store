@@ -4,10 +4,15 @@
   background-color: white;
   border-radius: 4px;
   border: 2px solid lightgrey;
+  justify-content: flex-end;
+  gap: 3rem;
 }
+
+/* First section of book details */
 
 .infoSection {
   text-align: left;
+  margin-right: auto;
 }
 
 .category {
@@ -51,3 +56,39 @@
   margin: auto;
   text-transform: capitalize;
 }
+
+/* Second section with progess */
+
+.progressIndicator {
+  display: grid;
+  column-gap: 10px;
+  grid-template: "a b" 1fr "a c" 1fr ;
+  font-family: var(--Montserrat);
+  text-align: left;
+}
+
+.percentageLogo {
+  grid-area: a;
+  width: 90px;
+  margin: auto auto;
+}
+
+.percentageLogo>img {
+  width: 100%;
+}
+
+.percentageNumber {
+  grid-area: b;
+  font-size: 2rem;
+  align-self: flex-end;
+  font-weight: 500;
+}
+
+.percentageLabel {
+  grid-area: c;
+  font-size: 14px;
+  color: var(--Title-gray);
+  align-self: flex-start;
+}
+
+/* Third section for chapters */
