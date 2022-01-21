@@ -4,4 +4,50 @@
   gap: 15px;
   list-style: none;
   padding-inline-start: 0;
+  margin-bottom: 2.5rem;
+}
+
+.appFooter {
+  border-top: 1px solid lightgrey;
+}
+
+.appFooter>form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 2.125rem;
+  margin-bottom: 4rem;
+}
+
+.formTitle {
+  text-align: left;
+  flex: 2 1;
+  color: #888888;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#formLabel {
+  margin: 1.8rem 0 1rem 0
+}
+
+#bookTitle {
+  width: 100%;
+}
+
+form input {
+  height: 2.8rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: var(--Montserrat);
+  border: 1px solid lightgrey;
+}
+
+#category {
+  flex: 0 1 18rem
+}
+
+#submitBook {
+  flex: 0 1 11.5rem;
+  height: 2.8rem;
 }

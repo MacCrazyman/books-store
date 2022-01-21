@@ -48,8 +48,8 @@ const Books = () => {
       </ul>
       <div className="appFooter">
         <form onSubmit={submitBook}>
-          <label htmlFor="bookTitle">
-            ADD NEW BOOK
+          <label htmlFor="bookTitle" className="formTitle">
+            <p id="formLabel">ADD NEW BOOK</p>
             <input placeholder="Book title" type="text" required name="bookTitle" id="bookTitle" />
           </label>
           <input list="categories" placeholder="Category" required name="categories" id="category" />
@@ -58,7 +58,7 @@ const Books = () => {
             <option value="cat2">cat2</option>
             <option value="cat3">cat3</option>
           </datalist>
-          <button type="submit">ADD BOOK</button>
+          <button id="submitBook" type="submit">ADD BOOK</button>
         </form>
       </div>
     </div>
