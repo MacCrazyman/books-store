@@ -6,3 +6,41 @@
   border-radius: 4px;
   box-shadow: 30px 30px 100px -60px;
 }
+
+.App-header {
+  background-color: white;
+}
+
+.App-nav {
+  display: flex;
+  align-items: center;
+  padding: 2rem 6.25rem;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.App-nav>a {
+  text-decoration: none;
+  font-family: var(--Montserrat);
+}
+
+h1 {
+  font-family: var(--Montserrat);
+  color: var(--Primary-blue);
+  font-size: 2rem;
+}
+
+.login-icon {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 2px solid var(--Title-gray);
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.login-icon > img {
+  width: 100%;
+  fill: var(--Primary-blue);
+}
+
