@@ -13,22 +13,18 @@ const Books = () => {
   const submitBook = (e) => {
     e.preventDefault();
     const newBook = {
-      id: v4(),
+      item_id: v4(),
       title: e.target.bookTitle.value,
-      author: 'Leonardo Pareja',
+      category: e.target.category.value,
     };
     fetch(booksEndpoint, {
       method: 'POST',
-      body: JSON.stringify({
-        item_id: newBook.id,
-        title: e.target.bookTitle.value,
-        category: 'Fiction',
-      }),
+      body: JSON.stringify(newBook),
       headers: { 'Content-type': 'application/json; charset=UTF-8' },
     }).then(() => {
       dispatch(addBook(newBook));
       e.target.bookTitle.value = '';
-      e.target.categories.value = '';
+      e.target.category.value = '';
     });
   };
 
@@ -36,7 +32,7 @@ const Books = () => {
 
     <div className="appContainer">
       <ul className="booksList">
-        {library.map((book) => (<Book book={book} key={book.id} />))}
+        {library.map((book) => (<Book book={book} key={book.item_id} />))}
       </ul>
       <div className="appFooter">
         <form onSubmit={submitBook}>
@@ -44,7 +40,7 @@ const Books = () => {
             ADD NEW BOOK
             <input placeholder="Book title" type="text" required name="bookTitle" id="bookTitle" />
           </label>
-          <input list="categories" placeholder="Category" required name="categories" />
+          <input list="categories" placeholder="Category" required name="categories" id="category" />
           <datalist id="categories">
             <option value="cat1">cat1</option>
             <option value="cat2">cat2</option>

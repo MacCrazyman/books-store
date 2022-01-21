@@ -10,13 +10,13 @@ const Book = ({ book }) => {
   };
   return (
     <li>
-      <div>category</div>
+      <div>{book.category}</div>
       <div>
         {book.title}
       </div>
-      <div>{book.author}</div>
+      <div>Author</div>
       <div>comments</div>
-      <button type="button" onClick={() => { deleteBook(book.id); }}>Remove</button>
+      <button type="button" onClick={() => { deleteBook(book.item_id); }}>Remove</button>
       <div>Edit</div>
       <div>Percentage</div>
       <div>completed</div>
@@ -30,9 +30,9 @@ const Book = ({ book }) => {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
