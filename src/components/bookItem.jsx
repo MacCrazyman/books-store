@@ -2,11 +2,17 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
+const appKey = 'uhDrozhDK5K3sfDSAsYf';
+const APIurl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
+const booksEndpoint = `${APIurl}/${appKey}/books/`;
+
 const Book = ({ book }) => {
   const dispatch = useDispatch();
 
   const deleteBook = (id) => {
-    dispatch(removeBook(id));
+    fetch(`${booksEndpoint}${id}`, { method: 'DELETE' }).then(() => {
+      dispatch(removeBook(id));
+    });
   };
   return (
     <li>
