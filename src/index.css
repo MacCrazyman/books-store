@@ -1,3 +1,20 @@
+:root {
+  --Montserrat: 'Montserrat', sans-serif;
+  --Roboto: 'Roboto Slab', serif;
+  --Primary-blue: #0290ff;
+  --Secondary-blue: #4386bf;
+  --Title-gray: #888;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dflex {
+  display: flex;
+}
+
 body {
   margin: 0;
   font-family:
@@ -14,6 +31,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f6fa;
 }
 
 code {
@@ -24,4 +42,14 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+button {
+  font-family: var(--Roboto);
+  color: white;
+  text-transform: uppercase;
+  background: var(--Primary-blue);
+  border: none;
+  border-radius: 2px;
+  padding: 0.5rem 1.37rem;
 }

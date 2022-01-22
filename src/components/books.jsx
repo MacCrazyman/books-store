@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
 import { addBook, retreiveBooks } from '../redux/books/books';
 import Book from './bookItem';
+import './books.css';
 
 const appKey = 'uhDrozhDK5K3sfDSAsYf';
 const APIurl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
@@ -42,13 +43,13 @@ const Books = () => {
   return (
 
     <div className="appContainer">
-      <ul className="booksList">
+      <ul className="booksList dflex">
         {library.map((book) => (<Book book={book} key={book.item_id} />))}
       </ul>
-      <div className="appFooter">
+      <div className="appFooter dflex">
         <form onSubmit={submitBook}>
-          <label htmlFor="bookTitle">
-            ADD NEW BOOK
+          <label htmlFor="bookTitle" className="formTitle">
+            <p id="formLabel">ADD NEW BOOK</p>
             <input placeholder="Book title" type="text" required name="bookTitle" id="bookTitle" />
           </label>
           <input list="categories" placeholder="Category" required name="categories" id="category" />
@@ -57,7 +58,7 @@ const Books = () => {
             <option value="cat2">cat2</option>
             <option value="cat3">cat3</option>
           </datalist>
-          <button type="submit">ADD BOOK</button>
+          <button id="submitBook" type="submit">ADD BOOK</button>
         </form>
       </div>
     </div>

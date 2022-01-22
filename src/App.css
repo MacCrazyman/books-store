@@ -1,3 +1,53 @@
 .App {
   text-align: center;
+  background-color: #fafafa;
+  width: 87.5%;
+  margin: 10rem auto;
+  border-radius: 4px;
+  box-shadow: 30px 30px 100px -60px;
+}
+
+.App-header {
+  background-color: white;
+}
+
+.App-nav {
+  align-items: center;
+  padding: 2rem 6.25rem;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+footer > a {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+.App-nav > a {
+  text-decoration: none;
+  font-family: var(--Montserrat);
+}
+
+h1 {
+  font-family: var(--Montserrat);
+  color: var(--Primary-blue);
+  font-size: 2rem;
+}
+
+.login-icon {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 2px solid lightgrey;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.login-icon > img {
+  width: 100%;
+  fill: var(--Primary-blue);
+}
+
+main {
+  padding: 2rem 6.25rem;
 }

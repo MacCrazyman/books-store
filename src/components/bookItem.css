@@ -1,0 +1,124 @@
+.bookItem {
+  padding: 28px;
+  background-color: white;
+  border-radius: 4px;
+  border: 2px solid lightgrey;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+
+/* First section of book details */
+
+.infoSection {
+  text-align: left;
+  margin-right: auto;
+}
+
+.category {
+  font-family: var(--Montserrat);
+  font-weight: bold;
+  color: var(--Title-gray);
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  margin: 5px 0;
+}
+
+.title {
+  font-family: var(--Roboto);
+  font-size: 1.375rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 5px 0;
+}
+
+.author {
+  color: var(--Secondary-blue);
+  font-family: var(--Roboto);
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+.buttons {
+  color: lightgrey;
+  font-size: 1.5rem;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.smoothLink {
+  background: none;
+  border: none;
+  color: var(--Secondary-blue);
+  font-family: var(--Roboto);
+  font-size: 0.875rem;
+  margin: auto;
+  text-transform: capitalize;
+}
+
+/* Second section with progess */
+
+.progressIndicator {
+  display: grid;
+  column-gap: 10px;
+  grid-template: "a b" 1fr "a c" 1fr;
+  font-family: var(--Montserrat);
+  text-align: left;
+}
+
+.percentageLogo {
+  grid-area: a;
+  width: 90px;
+  margin: auto auto;
+}
+
+.percentageLogo > img {
+  width: 100%;
+}
+
+.percentageNumber {
+  grid-area: b;
+  font-size: 2rem;
+  align-self: flex-end;
+  font-weight: 500;
+}
+
+.percentageLabel {
+  grid-area: c;
+  font-size: 14px;
+  color: var(--Title-gray);
+  align-self: flex-start;
+}
+
+/* Third section for chapters */
+
+.separator {
+  border: 1px solid lightgrey;
+  height: 4rem;
+  align-self: center;
+}
+
+.chapterSection {
+  text-align: left;
+  font-family: var(--Roboto);
+  font-weight: 300;
+  flex-direction: column;
+  justify-content: space-around;
+  min-width: 300px;
+}
+
+.chapterLabel {
+  color: var(--Title-gray);
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.currentChapter {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.updateProgressButton {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  width: 184px;
+}
