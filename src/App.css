@@ -12,7 +12,6 @@
 }
 
 .App-nav {
-  display: flex;
   align-items: center;
   padding: 2rem 6.25rem;
   gap: 2rem;

@@ -43,10 +43,10 @@ const Books = () => {
   return (
 
     <div className="appContainer">
-      <ul className="booksList">
+      <ul className="booksList dflex">
         {library.map((book) => (<Book book={book} key={book.item_id} />))}
       </ul>
-      <div className="appFooter">
+      <div className="appFooter dflex">
         <form onSubmit={submitBook}>
           <label htmlFor="bookTitle" className="formTitle">
             <p id="formLabel">ADD NEW BOOK</p>

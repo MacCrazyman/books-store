@@ -17,14 +17,14 @@ const Book = ({ book }) => {
     });
   };
   return (
-    <li className="bookItem">
+    <li className="bookItem dflex">
       <div className="infoSection">
         <div className="category">{book.category}</div>
         <div className="title">
           {book.title}
         </div>
         <div className="author">Author</div>
-        <div className="buttons">
+        <div className="buttons dflex">
           <div className="commentButton smoothLink">comments</div>
           |
           <button className="removeButton smoothLink" type="button" onClick={() => { deleteBook(book.item_id); }}>Remove</button>
@@ -38,7 +38,7 @@ const Book = ({ book }) => {
         <div className="percentageLabel">completed</div>
       </div>
       <div className="separator" />
-      <div className="chapterSection">
+      <div className="chapterSection dflex">
         <div className="chapterLabel">Current chapter</div>
         <div className="currentChapter">chapter number</div>
         <button className="updateProgressButton" type="button">Update progress</button>

@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <nav className="App-nav">
+        <nav className="App-nav dflex">
           <h1>Bookstore CMS</h1>
           <Link to="/">Books</Link>
           <Link to="/categories">Categories</Link>

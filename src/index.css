@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+.dflex {
+  display: flex;
+}
+
 body {
   margin: 0;
   font-family:
